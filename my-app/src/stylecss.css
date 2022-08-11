@@ -1,0 +1,72 @@
+input {
+    background-color: black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-color: white;
+    border-bottom-width: 1px;
+    color: white;
+    height: 40px;
+ 
+}
+body {
+    background-color: black;
+    color: #e9ecef;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+h1{
+    line-height:normal;
+    font-size:90px;
+}
+
+canvas{
+    background-image:url('./../down.jpeg');
+
+    /* background-color: white; */
+    width: 500px;
+    height: 500px;
+    
+}
+
+#fileInput{
+    width: 50%;
+    background-color: black;
+    color: #e9ecef;
+}
+
+.blank{
+    padding:3%;
+}
+.login{
+    padding:3%;
+}
+
+.loginCon{
+    display : inline-flex;
+    flex-direction: column;
+    padding : 1%;
+}
+
+.container{
+    position:relative;
+    
+    top:100px; 
+}
+
+.noInfo{
+    border-width : 3px 3px 3px 3px;
+    border-style: solid;
+    border-color: red;
+
+}
+
+.selected{
+    color : rgb(223, 39, 39)
+}
+
+.center{
+    vertical-align: top;
+    margin: auto;
+}
+
