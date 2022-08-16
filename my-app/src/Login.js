@@ -1,5 +1,5 @@
-import SignUpForm from "./pages/SignUpForm"
-import LoginForm from "./pages/LoginForm"
+import SignUpForm from "./pages/user/SignUpForm"
+import LoginForm from "./pages/user/LoginForm"
 import { useEffect, useState } from "react";
 
 const Login = () => {
@@ -53,7 +53,7 @@ const Login = () => {
             signUp: false
         }) 
     }}>
-    <h1 className="h1Text selected" >로그인
+    <h1 className="h1Text " >로그인
     </h1>
 </a>
 </div>

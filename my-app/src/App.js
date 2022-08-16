@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 
-import Headers from './Headers';
+import Header from './Header';
 // import Footer from './Footer';
 import Login from './Login'
 import Upload from './Upload.js'
-// import './../public/stylecss.css'
+import Feed from "./Feed";
 
 //Redux
 import Store from "./app/Store";
@@ -16,12 +16,13 @@ function App() {
   return (
    <>
    <Provider store={Store}>
-     <Headers />
+     <Header />
      <Routes>
       <Route path='/' element={<Login />} />
 
      
      <Route path='post'>
+        <Route path='list' element={<Feed />} />
         <Route path='upload' element={<Upload />} />
      </Route>
 

@@ -1,4 +1,4 @@
-
+import Canvas from "./pages/post/Canvas"
 
 const Upload = () => {
     return(
@@ -27,8 +27,9 @@ const Upload = () => {
             <input className="form-control form-control-lg" id="fileInput" type="file"></input>&nbsp;&nbsp;&nbsp;&nbsp;
             <button className="btn btn-outline-light">제출</button>
         </div>
-        <div className="canvas">canvas</div>
-        <canvas></canvas>
+        <Canvas />
+        {/* <div id="jsCanvas" className="canvas">canvas</div> */}
+        {/* <canvas></canvas> */}
 
     </div>
     <div className="blank"></div>
