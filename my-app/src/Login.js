@@ -40,7 +40,6 @@ const Login = () => {
         })
     }
 
-
     return(
     <>
     <div className="container">
@@ -53,7 +52,7 @@ const Login = () => {
             signUp: false
         }) 
     }}>
-    <h1 className="h1Text " >로그인
+    <h1 className="h1Text center" >로그인
     </h1>
 </a>
 </div>
@@ -64,7 +63,7 @@ const Login = () => {
             signUp: true
         })
     }}>
-    <h1 className="h1Text">회원가입
+    <h1 className="h1Text center">회원가입
     {/* <span style={{letterSpacing:'normal', padding:'10%'}}></span> */}
     </h1>
 </a>

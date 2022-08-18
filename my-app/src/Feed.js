@@ -16,7 +16,10 @@ const Feed = () => {
                 <h1>피드</h1>
             </p> */}
             <Gallery photos={photos} direction={"column"}/>
+        
+            <div className="blank" />
         </div>
+        
         
     )
 }

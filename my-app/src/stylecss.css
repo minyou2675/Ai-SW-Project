@@ -9,6 +9,10 @@ input {
     height: 40px;
  
 }
+a{
+    text-decoration-line : none;
+}
+
 body {
     background-color: black;
     color: #e9ecef;
@@ -20,10 +24,11 @@ h1{
     /* font-size:90px; */
 }
 
-    /* background-image:url('./../down.jpeg'); */
     canvas{
     border-style: solid;
-
+    background-image:url('https://images.unsplash.com/photo-1513682121497-80211f36a7d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80');
+    width : 388;
+    height : 581;
     /* box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08); */
     /* background-color: white;
     width: 500px;
@@ -68,7 +73,8 @@ h1{
 }
 
 .center{
-    vertical-align: top;
+    /* vertical-align: top; */
     margin: auto;
+    text-align: center; 
 }
 

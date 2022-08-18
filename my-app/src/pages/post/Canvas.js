@@ -8,8 +8,10 @@ const Canvas = () => {
 
     useEffect(() => {
         const canvas = canvasRef.current;
-        canvas.width = window.innerWidth * 0.5;
-        canvas.height = window.innerHeight;
+        canvas.width = 388;
+        canvas.height = 581;
+        // canvas.width = window.innerWidth * 0.5;
+        // canvas.height = window.innerHeight;
         // canvas.background = 'https://img.hani.co.kr/imgdb/original/2007/1227/68227042_20071227.jpg'
         // canvas.background-image = url('')
         // canvas.
@@ -98,11 +100,14 @@ const Canvas = () => {
 
     return(
         <>
+        <div className="center">
         <canvas id="jsCanvas" className="canvas" ref={canvasRef}
         onMouseMove={onMouseMoveR}
         onMouseDown={startRecting}
         onMouseUp={stopRecting}
         ></canvas>
+
+        </div>
         </>
     )
 }

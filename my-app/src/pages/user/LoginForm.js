@@ -2,7 +2,7 @@ import $ from "jquery";
 import axios from "axios";
 import port from "../../data/port.json";
 import { useNavigate } from "react-router-dom";
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 
 import { useCookies } from "react-cookie";
 
@@ -10,7 +10,6 @@ import { useCookies } from "react-cookie";
 const LoginForm = ({ signInData, onChangeSignInData }) => {
     
     const [cookies, setCookie, removeCookie] = useCookies(["userData"]);
-    const emailRef = useRef();
     const navigate = useNavigate();
 
     const [errorMessage, setErrorMessage] = useState("");
@@ -57,7 +56,7 @@ const LoginForm = ({ signInData, onChangeSignInData }) => {
                     <span>비밀번호</span>
                     <input name="password" id="password" type="password" onChange={onChangeSignInData} placeholder="" aria-required="false" maxLength="100" aria-invalid="true"></input>
                 </div>
-                <div className="loginCon">
+                <div className="mb-3">
                     <p className="text-danger">
                         {errorMessage}
                     </p>
