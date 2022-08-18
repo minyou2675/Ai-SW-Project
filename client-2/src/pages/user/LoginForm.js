@@ -43,18 +43,18 @@ const LoginForm = ({ signInData, onChangeSignInData }) => {
         return await axios.post(port.url + '/user/Login', signInData);
     }
     return(
-       <>
-       <div className="blank"></div>
+    <>
+        <div className="blank"></div>
         <form>
             <div className="login">
                 <div className='loginCon'>
                     <span>이메일</span>
-                    <input className='' name="email" id="email" onChange={onChangeSignInData} type="email" placeholder="" aria-required="false" maxLength="100" aria-invalid="true"></input>
+                    <input className='' name="email" id="email" onChange={onChangeSignInData} type="email" aria-required="false" maxLength="100" aria-invalid="true"></input>
                     
                 </div>
                 <div className='loginCon'>
                     <span>비밀번호</span>
-                    <input name="password" id="password" type="password" onChange={onChangeSignInData} placeholder="" aria-required="false" maxLength="100" aria-invalid="true"></input>
+                    <input name="password" id="password" type="password" onChange={onChangeSignInData} autoComplete="off"  aria-required="false" maxLength="100" aria-invalid="true"></input>
                 </div>
                 <div className="mb-3">
                     <p className="text-danger">
@@ -66,9 +66,7 @@ const LoginForm = ({ signInData, onChangeSignInData }) => {
             <button type="button" onClick={onClickLoginButton} className="btn btn-outline-light" style={{margin:'1%'}}>로그인</button>
             </div>
         </form>
-       </>
-
-
+    </>
     )
 }
 

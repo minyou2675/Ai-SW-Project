@@ -1,7 +1,32 @@
 import { ReactComponent as FeedIcon } from "./icon/feed.svg"
 import { ReactComponent as UploadIcon } from "./icon/upload.svg";
 import { ReactComponent as CamarIcon } from "./icon/camar.svg"
+import { useState } from 'react';
+import Modalcom from "./pages/post/Modalcom";
+
 const Header = () => {
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => {
+    setShow(!show)
+  };
+  const handleShow = () => {
+    setShow(!show)
+  };
+
+  const [view, setView] = useState(true);
+
+  const loginClick = () => {
+    setView(!view)
+  };
+  const logoutClick = () => {
+    setView(!view)
+  };
+
+  // useEffect(()=>{
+  //   console.log(show)
+  // },[show]);
     return (
         <div className="px-3 py-2 text-bg-dark">
           <div className="cont">
@@ -12,10 +37,20 @@ const Header = () => {
               </a>
               <ul className="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
                 <li>
-                  <a href="/post/upload" className="nav-link text-white">
+                  <button className="nav-link text-white" style={{backgroundColor:'transparent', border:0, outline:0}} onClick={handleShow}>
+                 
+                  {/* <div style={{color:'black'}}> */}
+                   <Modalcom show={show} handleClose={handleClose}/>
+                 
+                  {/* </div> */}
+                  
                   <UploadIcon />
                     Upload
-                  </a>
+                  </button>
+                  {/* <a href="/post/upload" className="nav-link text-white">
+                  <UploadIcon />
+                    Upload
+                  </a> */}
                 </li>
                 <li>
                   <a href="/post/list" className="nav-link text-white">
@@ -23,15 +58,23 @@ const Header = () => {
                     Feed
                   </a>
                 </li>
-                <li>
-                <button type="button" className="btn btn-outline-info">logIn</button>
-                </li>
-                &nbsp;&nbsp;
-                <li>
-                  <button type="button" className="btn btn-outline-warning">signUp</button>
-                  &nbsp;&nbsp;
-                  <button type="button" class="btn btn-outline-danger">logOut</button>
-                </li>
+
+                
+
+                {
+                view ? (<li className="center">
+                  <button type="button"className="btn btn-outline-info" onClick={loginClick}>
+                    <a href='/'>
+                    logIn/signUp
+                    </a>
+                    </button>
+
+                  </li>) : (<li className="center">
+                                  <button type="button" className="btn btn-outline-danger" onClick={logoutClick}>logOut</button>
+                                </li>)
+                }
+
+                
               </ul>
             </div>
           </div>
